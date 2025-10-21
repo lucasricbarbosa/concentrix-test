@@ -36,7 +36,7 @@ export function DateInput({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className={cn(
-          'focus:border-brand-inspirational-blue-600 focus:ring-brand-inspirational-blue-600 w-full cursor-pointer rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm transition-colors focus:ring-1 focus:outline-none',
+          'focus:border-brand-inspirational-blue-600 focus:ring-brand-inspirational-blue-600 w-full cursor-pointer rounded-md border border-gray-300 bg-white px-3 py-2 text-base text-gray-900 shadow-sm transition-colors focus:ring-1 focus:outline-none',
           error && 'border-red-500 focus:border-red-500 focus:ring-red-500',
         )}
         required

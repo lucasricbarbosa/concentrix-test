@@ -1,14 +1,14 @@
-import { ArrowDownCircleIcon } from 'lucide-react'
 import { InfoCard } from './info-card'
 import notePng from '../../assets/note.png'
 import docSearchPng from '../../assets/doc-search.png'
 import bankCirclesPng from '../../assets/bank-circles.png'
+import { ArrowDownCircle } from '../ui/arrow-down-circle'
 
 export function Benefits() {
   return (
     <section className="bg-brand-gray-100 pt-24 pb-10 md:px-4">
-      <div className="mx-auto flex h-full w-full max-w-4xl flex-col gap-10">
-        <h3 className="text-brand-cool-gray-900 flex flex-col text-[40px] max-[768px]:px-4">
+      <div className="mx-auto flex h-full w-full max-w-4xl flex-col gap-8 md:gap-10">
+        <h3 className="text-brand-cool-gray-900 flex flex-col text-[28px] max-[768px]:px-4 md:text-[40px]">
           <span className="font-normal">Benefícios para ajudar</span>
           <span className="font-bold">você e sua empresa</span>
         </h3>
@@ -27,12 +27,7 @@ export function Benefits() {
           </div>
           <PaymentCard />
         </div>
-        <div className="flex w-full justify-center">
-          <ArrowDownCircleIcon
-            strokeWidth={1}
-            className="text-brand-gray-950 size-10"
-          />
-        </div>
+        <ArrowDownCircle />
       </div>
     </section>
   )
@@ -47,7 +42,7 @@ function PaymentCard() {
           Seu pagamento, como preferir.
         </span>
       </div>
-      <div className="flex w-full items-center pl-5">
+      <div className="flex w-full items-center pr-5 pl-5 md:pr-0">
         <img
           className="max-[768px]:min-h-56 max-[768px]:min-w-56"
           src={bankCirclesPng}
