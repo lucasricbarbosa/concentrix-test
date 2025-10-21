@@ -1,4 +1,5 @@
 import { Benefits } from './components/benefits/benefits'
+import { FrequentlyQuestions } from './components/frequently-questions/frequently-quetions'
 import { Header } from './components/header'
 import { Hero } from './components/hero/hero'
 import { PersonalizedService } from './components/personalized-service/personalized-service'
@@ -12,6 +13,7 @@ function App() {
       <Benefits />
       <PersonalizedService />
       <StartNow />
+      <FrequentlyQuestions />
     </>
   )
 }
