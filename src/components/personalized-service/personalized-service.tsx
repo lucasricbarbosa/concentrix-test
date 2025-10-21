@@ -4,18 +4,19 @@ import featuredBgCard1 from '../../assets/featured-bg-card-1.png'
 import featuredBgCard2 from '../../assets/featured-bg-card-2.png'
 import wpp3dIcon from '../../assets/whatsapp-3d-icon.png'
 import phone3dIcon from '../../assets/phone-3d-icon.png'
+import { TitleAndDescription } from '../ui/title-and-description'
 
 export function PersonalizedService() {
   return (
-    <section className="mx-auto flex max-w-4xl flex-col gap-8 pt-24 pb-10 md:gap-10">
+    <section className="mx-auto flex max-w-4xl flex-col gap-8 pt-10 pb-10 md:gap-10 md:pt-24">
       <div className="flex w-full flex-col items-center justify-center gap-2.5 px-4">
-        <h2 className="text-brand-gray-900 text-center text-[28px] font-bold md:text-[40px]">
-          Atendimento personalizado
-        </h2>
-        <p className="text-center text-xl font-normal">
-          Diversos canais, para cada necessidade
-        </p>
+        <h2 className="text-brand-gray-900 text-center text-[28px] font-bold md:text-[40px]"></h2>
+        <p className="text-center text-xl font-normal"></p>
       </div>
+      <TitleAndDescription
+        title="Atendimento personalizado"
+        description="Diversos canais, para cada necessidade"
+      />
       <FeaturedCards />
       <ArrowDownCircle />
     </section>

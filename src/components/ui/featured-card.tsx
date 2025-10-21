@@ -17,7 +17,7 @@ export function FeaturedCard({
       style={{ backgroundImage: `url(${cardBackground})` }}
     >
       <img src={icon} alt={`Ícone sobre ${title} `} />
-      <div className="flex flex-col gap-1">
+      <div className="mt-4 flex flex-col gap-1">
         <p className="text-base font-bold text-white">{description}</p>
         <h4 className="text-[40px] font-bold text-white">{title}</h4>
       </div>
