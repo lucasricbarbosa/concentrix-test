@@ -3,22 +3,30 @@
 @theme {
   --font-display: 'Montserrat', sans-serif;
 
+  --color-brand-inspirational-blue-50: #ebffff;
   --color-brand-inspirational-blue-600: #039db7;
   --color-brand-inspirational-blue-800: #126478;
+  --color-brand-inspirational-blue-900: #145365;
+
   --color-brand-unifying-blue-700: #007cb4;
+
+  --color-brand-cool-gray-300: #aec0cb;
   --color-brand-cool-gray-500: #628295;
   --color-brand-cool-gray-600: #4d697c;
   --color-brand-cool-gray-700: #405564;
   --color-brand-cool-gray-900: #323e48;
-  --color-brand-gray-500: #a5b0bb;
+
   --color-brand-gray-100: #e3e6ea;
   --color-brand-gray-200: #d0dae1;
   --color-brand-gray-500: #5e6d7c;
   --color-brand-gray-700: #454d59;
   --color-brand-gray-900: #373b42;
   --color-brand-gray-950: #22252a;
+
   --color-smart-green-950: #004955;
+
   --color-brand-gray-cool-500: #5f6d72;
+
   --color-brand-concentrix-light-blue: #25e2cc;
   --color-brand-concentrix-dark-blue: #003d5b;
 }

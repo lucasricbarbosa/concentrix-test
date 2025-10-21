@@ -53,7 +53,7 @@ export function AccordionQuestions() {
     >
       {faqData.map((faq) => (
         <AccordionItem key={faq.id} value={faq.id}>
-          <AccordionTrigger className="px-2.5 py-5 text-lg font-bold text-white">
+          <AccordionTrigger className="cursor-pointer px-2.5 py-5 text-lg font-bold text-white">
             {faq.question}
           </AccordionTrigger>
           <AccordionContent>
