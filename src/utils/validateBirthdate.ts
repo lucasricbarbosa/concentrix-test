@@ -14,23 +14,21 @@ export function validateBirthdate(dateString: string): {
   }
 
   if (birthDate > today) {
-    return { valid: false, message: 'Data de nascimento não pode ser futura' }
+    return { valid: false, message: 'Data não pode ser futura' }
   }
 
   let age = today.getFullYear() - birthDate.getFullYear()
   const monthDiff = today.getMonth() - birthDate.getMonth()
-  const dayDiff = today.getDate() - birthDate.getDate()
 
-  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+  if (
+    monthDiff < 0 ||
+    (monthDiff === 0 && today.getDate() < birthDate.getDate())
+  ) {
     age--
   }
 
   if (age < 18) {
     return { valid: false, message: 'Você deve ter pelo menos 18 anos' }
-  }
-
-  if (age > 120) {
-    return { valid: false, message: 'Data de nascimento inválida' }
   }
 
   return { valid: true }

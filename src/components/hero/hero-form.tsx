@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { CpfInput } from '../ui/cpf-input'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
-import { DateInput } from '../ui/date-input'
 import { validateCPF } from '../../utils/validateCPF'
 import { validateBirthdate } from '../../utils/validateBirthdate'
+import { DatePicker } from '../ui/date-picker'
+import { CnpjInput } from '../ui/cnpj-input'
+import { validateCNPJ } from '../../utils/validateCnpj'
 
 export function HeroForm() {
   const [cpf, setCpf] = useState('')
@@ -11,10 +13,19 @@ export function HeroForm() {
   const [cpfError, setCpfError] = useState('')
   const [birthdateError, setBirthdateError] = useState('')
   const [submitMessage, setSubmitMessage] = useState('')
+  const [cnpj, setCnpj] = useState('')
+  const [cnpjError, setCnpjError] = useState('')
+  const [activeTab, setActiveTab] = useState('individual')
 
   const handleCpfChange = (value: string) => {
     setCpf(value)
     setCpfError('')
+    setSubmitMessage('')
+  }
+
+  const handleCnpjChange = (value: string) => {
+    setCnpj(value)
+    setCnpjError('')
     setSubmitMessage('')
   }
 
@@ -29,27 +40,44 @@ export function HeroForm() {
 
     setCpfError('')
     setBirthdateError('')
+    setCnpjError('')
     setSubmitMessage('')
 
     let hasError = false
 
-    if (!cpf) {
-      setCpfError('CPF é obrigatório')
-      hasError = true
-    } else if (!validateCPF(cpf)) {
-      setCpfError('CPF inválido')
-      hasError = true
+    if (activeTab === 'individual') {
+      if (!cpf) {
+        setCpfError('CPF é obrigatório')
+        hasError = true
+      } else if (!validateCPF(cpf)) {
+        setCpfError('CPF inválido')
+        hasError = true
+      }
+
+      const birthdateValidation = validateBirthdate(birthdate)
+      if (!birthdateValidation.valid) {
+        setBirthdateError(birthdateValidation.message || 'Data inválida')
+        hasError = true
+      }
     }
 
-    const birthdateValidation = validateBirthdate(birthdate)
-    if (!birthdateValidation.valid) {
-      setBirthdateError(birthdateValidation.message || 'Data inválida')
-      hasError = true
+    if (activeTab === 'business') {
+      if (!cnpj) {
+        setCnpjError('CNPJ é obrigatório')
+        hasError = true
+      } else if (!validateCNPJ(cnpj)) {
+        setCnpjError('CNPJ inválido')
+        hasError = true
+      }
     }
 
     if (!hasError) {
       setSubmitMessage('✅ Login realizado com sucesso!')
-      console.log('Form submitted:', { cpf, birthdate })
+      const formData =
+        activeTab === 'individual'
+          ? { tipo: 'Pessoa Física', cpf, birthdate }
+          : { tipo: 'Pessoa Jurídica', cnpj }
+      console.log('Form submitted:', formData)
     }
   }
 
@@ -59,7 +87,7 @@ export function HeroForm() {
         <h2 className="text-brand-cool-gray-600 mb-2.5 text-sm font-normal">
           Tipo de perfil
         </h2>
-        <Tabs defaultValue="individual">
+        <Tabs defaultValue="individual" onValueChange={setActiveTab}>
           <TabsList className="flex w-full gap-2.5 p-0">
             <TabsTrigger className="w-full" value="individual">
               Pessoa Física
@@ -76,7 +104,11 @@ export function HeroForm() {
             cpfError={cpfError}
             birthdateError={birthdateError}
           />
-          <BussinessForm />
+          <BussinessForm
+            cnpj={cnpj}
+            setCnpj={handleCnpjChange}
+            cnpjError={cnpjError}
+          />
           <button
             type="submit"
             className="bg-brand-inspirational-blue-600 hover:bg-brand-inspirational-blue-800 mt-5 w-full cursor-pointer rounded-md px-4 py-2.5 font-semibold text-white transition-all focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
@@ -116,10 +148,12 @@ function IndividualForm({
     <TabsContent value="individual" className="space-y-4">
       <div className="mt-4 space-y-4">
         <CpfInput id="cpf" value={cpf} onChange={setCpf} error={cpfError} />
-        <DateInput
-          id="birthdate"
-          value={birthdate}
-          onChange={setBirthdate}
+        <DatePicker
+          value={birthdate ? new Date(birthdate) : undefined}
+          onChange={(date) => {
+            const formattedDate = date.toISOString().split('T')[0]
+            setBirthdate(formattedDate)
+          }}
           error={birthdateError}
         />
       </div>
@@ -127,14 +161,23 @@ function IndividualForm({
   )
 }
 
-function BussinessForm() {
+interface BusinessFormProps {
+  cnpj: string
+  setCnpj: (cnpj: string) => void
+  cnpjError: string
+}
+
+function BussinessForm({ cnpj, setCnpj, cnpjError }: BusinessFormProps) {
   return (
     <TabsContent value="business" className="space-y-4">
-      <h3 className="text-foreground text-lg font-medium">Password Settings</h3>
-      <p className="text-muted-foreground">
-        Change your password and manage security settings. Keep your account
-        secure with a strong password.
-      </p>
+      <div className="mt-4 space-y-4">
+        <CnpjInput
+          id="cnpj"
+          value={cnpj}
+          onChange={setCnpj}
+          error={cnpjError}
+        />
+      </div>
     </TabsContent>
   )
 }

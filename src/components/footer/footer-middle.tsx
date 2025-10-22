@@ -68,7 +68,7 @@ function FooterMiddleTaksToUs() {
 function FooterMiddlePayment() {
   return (
     <div className="flex flex-col gap-5">
-      <FooterTopicTitle title="Fale com a gente" />
+      <FooterTopicTitle title="Formas de pagamento" />
       <div className="flex items-center gap-2.5">
         <LinkButton
           icon={PixLogoIcon}
