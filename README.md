@@ -25,7 +25,16 @@
 # 🚀 Sobre o Projeto
 
 O objetivo deste teste foi reproduzir fielmente o design proposto, garantindo uma experiência fluida em dispositivos móveis e desktop.  
-O desenvolvimento foi guiado por boas práticas de componentização, semântica, acessibilidade e organização de código.
+
+A organização do código segue o princípio de pastas limpas, com pastas e módulos estruturados para clareza e facilidade de manutenção. Utilizei práticas como:
+
+- Componentização;
+- Componentes reutilizáveis seguindo o Composition Pattern;
+- Gerenciamento de estado com Context API;
+- Boas práticas de linting e formatação com ESLint;
+- Princípios de Clean Code.
+
+O projeto pode ser executado manualmente, mas ele também está hospedado na vercel, através desse link: https://concentrix-test.vercel.app/
 
   <br />
 
@@ -60,6 +69,7 @@ npm install
 
 # Inicie o servidor de desenvolvimento
 npm run dev
+```
 
 <br/>
 
