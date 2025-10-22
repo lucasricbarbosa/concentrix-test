@@ -30,7 +30,12 @@ export function ContextCard({
             {description}
           </p>
         </div>
-        <img className="size-40" src={image} alt={`Imagem sobre ${title}`} />
+        <img
+          loading="lazy"
+          className="size-40"
+          src={image}
+          alt={`Imagem sobre ${title}`}
+        />
       </div>
     </ScrollFadeIn>
   )

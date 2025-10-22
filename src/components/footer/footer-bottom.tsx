@@ -16,7 +16,7 @@ export function FooterBottom() {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <img src={verify3dLogo} alt="Ícone sobre segurança" />
+          <img loading="lazy" src={verify3dLogo} alt="Ícone sobre segurança" />
           <div>
             <span className="text-brand-inspirational-blue-900 text-xs font-semibold">
               Site protegido

@@ -44,6 +44,7 @@ function PaymentCard() {
       </div>
       <div className="flex w-full items-center pr-5 pl-5 md:pr-0">
         <img
+          loading="lazy"
           className="max-[768px]:min-h-56 max-[768px]:min-w-56"
           src={bankCirclesPng}
           alt="Bancos populares"
