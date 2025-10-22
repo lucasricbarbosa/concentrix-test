@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  <img alt="project logo" src="https://teddydigital.io/wp-content/uploads/2023/02/Ativo-13-8.png" width="224px"/><br/>
+  Teste Frontend - Teddy
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  Um projeto desenvolvido como parte do teste técnico para a posição de <b>Desenvolvedor Frontend Jr</b> na Teddy Open Finance.
+  <br/><br/>
+  O desafio consistiu em <b>implementar o design de uma página web</b> a partir de um layout fornecido, utilizando <b>React</b>, <b>TypeScript</b> e <b>Tailwind CSS</b>.
+  A aplicação foi desenvolvida com foco em <b>responsividade</b> seguindo o conceito <b>mobile-first</b> e na fidelidade <b>pixel a pixel</b> ao design do Figma.
+  <br/><br/>
+  O resultado é uma interface moderna, limpa e performática, construída com boas práticas de código, animações sutis e atenção aos detalhes.
+</p>
 
-Currently, two official plugins are available:
+<hr>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center">
 
-## React Compiler
+**[SOBRE O PROJETO](#-sobre-o-projeto) • [TECH STACK & LIBS](#-tech-stack--libs) • [COMO INSTALAR](#-como-instalar) • [FUNCIONALIDADES](#-funcionalidades) • [CONSIDERAÇÕES FINAIS](#-considerações-finais) • [AGRADECIMENTOS](#-agradecimentos)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+<br />
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 🚀 Sobre o Projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O objetivo deste teste foi reproduzir fielmente o design proposto, garantindo uma experiência fluida em dispositivos móveis e desktop.  
+O desenvolvimento foi guiado por boas práticas de componentização, semântica, acessibilidade e organização de código.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  <br />
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 💻 Tech Stack & Libs
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+As principais tecnologias e bibliotecas utilizadas neste projeto incluem:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **[React](https://react.dev/)** — Biblioteca JavaScript para construção de interfaces de usuário reativas e componentizadas.  
+- **[TypeScript](https://www.typescriptlang.org/)** — Superset do JavaScript que adiciona tipagem estática e melhora a legibilidade e a manutenção do código.  
+- **[Tailwind CSS](https://tailwindcss.com/)** — Framework de utilitários CSS para criação de interfaces modernas, responsivas e consistentes.  
+- **[Vite](https://vitejs.dev/)** — Ferramenta de build moderna que oferece alta performance no desenvolvimento frontend.  
+- **[ESLint](https://eslint.org/)** — Ferramenta de análise estática para manter a qualidade e o padrão do código.  
+- **[Prettier](https://prettier.io/)** — Formatador de código para garantir consistência e legibilidade.  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Além disso, foram aplicadas animações leves e transições suaves com **Tailwind** e propriedades CSS nativas, garantindo uma experiência de uso fluida e visualmente agradável.
+
+<br />
+
+# ⚙️ Como Instalar
+
+Siga os passos abaixo para executar o projeto localmente:
+
+```bash
+# Clone este repositório
+git clone https://github.com/lucasricbarbosa/concentrix-test
+
+# Acesse o diretório do projeto
+cd nome-do-repositorio
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+

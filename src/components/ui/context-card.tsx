@@ -1,3 +1,5 @@
+import { ScrollFadeIn } from './scroll-fade-in'
+
 interface ContextCardProps {
   title: string
   number: number
@@ -12,8 +14,11 @@ export function ContextCard({
   number,
 }: ContextCardProps) {
   return (
-    <div className="pr-4 md:pr-5">
-      <div className="flex h-full w-fit min-w-72 flex-shrink-0 flex-col items-center justify-between gap-8 rounded-2xl bg-white p-8 md:min-w-80 md:p-10">
+    <ScrollFadeIn
+      delay={number * 70}
+      className="w-full max-w-[426px] pr-4 md:pr-5"
+    >
+      <div className="flex h-full w-full min-w-72 flex-shrink-0 flex-col items-center justify-between gap-8 rounded-2xl bg-white p-8 md:min-w-80 md:p-10">
         <div className="flex flex-col items-center justify-center gap-2.5">
           <span className="text-brand-gray-200 text-5xl font-bold">
             {number}
@@ -27,6 +32,6 @@ export function ContextCard({
         </div>
         <img className="size-40" src={image} alt={`Imagem sobre ${title}`} />
       </div>
-    </div>
+    </ScrollFadeIn>
   )
 }

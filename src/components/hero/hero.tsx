@@ -6,7 +6,7 @@ import { HeroForm } from './hero-form'
 export function Hero() {
   return (
     <main
-      className="bg-cover bg-center bg-no-repeat md:bg-right"
+      className="bg-cover bg-center bg-no-repeat md:bg-right lg:bg-position-[right_-0.5rem_top_-8rem]"
       style={{ backgroundImage: `url(${heroBackground})` }}
     >
       <div className="mx-auto flex h-full w-full max-w-4xl flex-col items-center justify-center gap-10 px-4 pt-24 pb-10">
@@ -18,12 +18,14 @@ export function Hero() {
           </div>
           <HeroForm />
         </div>
-        <div className="flex flex-col items-center gap-1">
+        <div className="mt-8 flex flex-col items-center gap-1 text-white">
           <MouseIcon
             strokeWidth={1}
-            className="size-8 animate-bounce font-normal text-white"
+            className="animate-bounce-pause text-foreground size-8 font-normal"
           />
-          <span className="text-lg font-normal text-white">Saiba mais</span>
+          <span className="text-foreground text-lg font-normal">
+            Saiba mais
+          </span>
         </div>
       </div>
     </main>

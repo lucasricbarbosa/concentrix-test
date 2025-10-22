@@ -82,47 +82,49 @@ export function HeroForm() {
   }
 
   return (
-    <div className="flex flex-col gap-5 rounded-lg bg-white p-5 shadow">
-      <form onSubmit={handleSubmit}>
-        <h2 className="text-brand-cool-gray-600 mb-2.5 text-sm font-normal">
-          Tipo de perfil
-        </h2>
-        <Tabs defaultValue="individual" onValueChange={setActiveTab}>
-          <TabsList className="flex w-full gap-2.5 p-0">
-            <TabsTrigger className="w-full" value="individual">
-              Pessoa Física
-            </TabsTrigger>
-            <TabsTrigger className="w-full" value="business">
-              Pessoa Jurídica
-            </TabsTrigger>
-          </TabsList>
-          <IndividualForm
-            cpf={cpf}
-            setCpf={handleCpfChange}
-            birthdate={birthdate}
-            setBirthdate={handleBirthdateChange}
-            cpfError={cpfError}
-            birthdateError={birthdateError}
-          />
-          <BussinessForm
-            cnpj={cnpj}
-            setCnpj={handleCnpjChange}
-            cnpjError={cnpjError}
-          />
-          <button
-            type="submit"
-            className="bg-brand-inspirational-blue-600 hover:bg-brand-inspirational-blue-800 mt-5 w-full cursor-pointer rounded-md px-4 py-2.5 font-semibold text-white transition-all focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
-          >
-            Entrar
-          </button>
+    <div className="flex w-full md:justify-end">
+      <div className="flex w-full flex-col gap-5 rounded-lg bg-white p-5 shadow md:w-[380px]">
+        <form onSubmit={handleSubmit}>
+          <h2 className="text-brand-cool-gray-600 mb-2.5 text-sm font-normal">
+            Tipo de perfil
+          </h2>
+          <Tabs defaultValue="individual" onValueChange={setActiveTab}>
+            <TabsList className="flex w-full gap-2.5 p-0">
+              <TabsTrigger className="w-full" value="individual">
+                Pessoa Física
+              </TabsTrigger>
+              <TabsTrigger className="w-full" value="business">
+                Pessoa Jurídica
+              </TabsTrigger>
+            </TabsList>
+            <IndividualForm
+              cpf={cpf}
+              setCpf={handleCpfChange}
+              birthdate={birthdate}
+              setBirthdate={handleBirthdateChange}
+              cpfError={cpfError}
+              birthdateError={birthdateError}
+            />
+            <BussinessForm
+              cnpj={cnpj}
+              setCnpj={handleCnpjChange}
+              cnpjError={cnpjError}
+            />
+            <button
+              type="submit"
+              className="bg-brand-inspirational-blue-600 hover:bg-brand-inspirational-blue-800 mt-5 w-full cursor-pointer rounded-md px-4 py-2.5 font-semibold text-white transition-all focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+            >
+              Entrar
+            </button>
 
-          {submitMessage && (
-            <div className="mt-4 rounded-md border border-green-200 bg-green-50 p-3 text-center text-sm text-green-700">
-              {submitMessage}
-            </div>
-          )}
-        </Tabs>
-      </form>
+            {submitMessage && (
+              <div className="mt-4 rounded-md border border-green-200 bg-green-50 p-3 text-center text-sm text-green-700">
+                {submitMessage}
+              </div>
+            )}
+          </Tabs>
+        </form>
+      </div>
     </div>
   )
 }

@@ -39,3 +39,23 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@keyframes bounce-with-pause {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-pause {
+  animation: bounce-with-pause 4s ease-in-out infinite;
+}
