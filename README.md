@@ -1,10 +1,10 @@
 <h1 align="center">
-  <img alt="project logo" src="https://teddydigital.io/wp-content/uploads/2023/02/Ativo-13-8.png" width="224px"/><br/>
-  Teste Frontend - Teddy
+  <img alt="project logo" src="https://www.copc.com/wp-content/uploads/2024/07/CNX_Full-Color.jpg" width="224px"/><br/>
+  Teste Frontend - Concentrix
 </h1>
 
 <p align="center">
-  Um projeto desenvolvido como parte do teste técnico para a posição de <b>Desenvolvedor Frontend Jr</b> na Teddy Open Finance.
+  Um projeto desenvolvido como parte do teste técnico para a posição de <b>Desenvolvedor Frontend</b> na Concentrix.
   <br/><br/>
   O desafio consistiu em <b>implementar o design de uma página web</b> a partir de um layout fornecido, utilizando <b>React</b>, <b>TypeScript</b> e <b>Tailwind CSS</b>.
   A aplicação foi desenvolvida com foco em <b>responsividade</b> seguindo o conceito <b>mobile-first</b> e na fidelidade <b>pixel a pixel</b> ao design do Figma.
@@ -46,7 +46,7 @@ Além disso, foram aplicadas animações leves e transições suaves com **Tailw
 
 # ⚙️ Como Instalar
 
-Siga os passos abaixo para executar o projeto localmente:
+Instale o Node.js LTS na sua máquina e siga os passos abaixo para executar o projeto localmente:
 
 ```bash
 # Clone este repositório
@@ -60,4 +60,65 @@ npm install
 
 # Inicie o servidor de desenvolvimento
 npm run dev
+
+<br/>
+
+# 🖥️ Utilizando o sistema
+
+Após instalar e iniciar o projeto, você pode visualizar a página diretamente no navegador em **http://localhost:5173**.
+
+Funcionalidades e características implementadas:
+
+- **Layout Responsivo:** Interface totalmente adaptada para diferentes tamanhos de tela, seguindo o conceito **mobile-first**.  
+- **Fidelidade ao Figma:** Desenvolvimento **pixel a pixel** com base no design original fornecido.  
+- **Animações Suaves:** Transições e efeitos leves aplicados para melhorar a experiência do usuário.  
+- **Componentização:** Estrutura baseada em componentes reutilizáveis e organizados para facilitar manutenção e escalabilidade.  
+- **Boas Práticas:** Código limpo, padronizado e legível, utilizando **TypeScript**, **ESLint** e **Prettier**.  
+- **Performance:** Construção otimizada com **Vite**, garantindo inicialização e atualização rápidas.  
+
+<br/>
+
+# 📚 Alguns Outros Detalhes Técnicos
+
+- **Design Responsivo**:  
+   - Toda a interface foi desenvolvida com base no conceito **mobile-first**, garantindo uma experiência consistente em diferentes tamanhos de tela.  
+   - O uso do **Tailwind CSS** permitiu criar componentes adaptáveis e manter o design fiel ao layout do Figma.
+
+- **Estruturação do Código**:  
+   - O projeto foi organizado com uma estrutura clara e modular, priorizando **legibilidade** e **reutilização de componentes**.  
+   - Implementação de **ESLint** e **Prettier** para assegurar padronização e qualidade do código.
+
+- **Otimização e Build**:  
+   - A combinação entre **React**, **TypeScript** e **Vite** garante um ambiente de desenvolvimento rápido e uma build leve e eficiente para produção.  
+
+- **Animações e Transições**:  
+   - Foram aplicadas animações sutis utilizando classes utilitárias do **Tailwind** e propriedades CSS nativas, melhorando a fluidez da interface sem comprometer a performance.
+
+- **Boas Práticas de Desenvolvimento**:  
+   - A aplicação foi construída seguindo princípios de **Clean Code**, **componentização** e **acessibilidade**.  
+   - Cada parte da interface foi pensada para ser **semântica** e **intuitiva**.
+
+<br />
+
+# 🧩 Considerações Finais
+
+Este projeto foi desenvolvido com foco em **qualidade visual**, **organização de código** e **atenção aos detalhes**, buscando representar fielmente o design proposto no Figma.  
+Durante o desenvolvimento, foi priorizada a **responsividade**, o uso de **boas práticas** e a entrega de uma interface moderna, limpa e performática.
+
+A experiência proporcionou uma ótima oportunidade de demonstrar habilidades em **React**, **TypeScript** e **Tailwind**, reforçando a importância de uma base sólida de código e de um fluxo de trabalho eficiente.
+
+<br/>
+
+# 🙌 Agradecimentos
+
+Agradeço à **Concentrix** pela oportunidade de participar deste desafio técnico.  
+Foi uma excelente experiência para aplicar boas práticas, explorar detalhes de design e reforçar minha paixão por construir interfaces funcionais e bem estruturadas.
+
+<br/>
+
+---
+
+<p align="center">
+  Feito por <b>Lucas Ricardo</b>
+</p>
 
